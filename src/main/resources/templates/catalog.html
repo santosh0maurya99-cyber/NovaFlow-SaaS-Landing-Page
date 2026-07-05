@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>NovaFlow | Premium Catalog</title>
+
+    <!-- Bootstrap -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+          rel="stylesheet">
+
+    <!-- Google Font -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- Premium CSS -->
+
+    <link rel="stylesheet" href="/css/premium.css">
+
+    <link rel="stylesheet" href="/css/catalog.css">
+</head>
+
+<body>
+
+<!--=========================
+        NAVBAR
+==========================-->
+
+<nav class="navbar navbar-expand-lg">
+
+    <div class="container">
+
+        <a class="navbar-brand"
+           href="/">
+
+            🚀 NovaFlow
+
+        </a>
+
+        <button class="navbar-toggler"
+                data-bs-toggle="collapse"
+                data-bs-target="#menu">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <div class="collapse navbar-collapse"
+             id="menu">
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+
+                    <a class="nav-link"
+                       href="/">
+
+                        Home
+
+                    </a>
+
+                </li>
+
+                <li class="nav-item">
+
+                    <a class="nav-link active"
+                       href="/catalog">
+
+                        Catalog
+
+                    </a>
+
+                </li>
+
+                <li class="nav-item">
+
+                    <a class="nav-link"
+                       href="/product">
+
+                        Products
+
+                    </a>
+
+                </li>
+
+                <li class="nav-item">
+
+                    <a class="nav-link"
+                       href="/cart">
+
+                        Cart
+
+                    </a>
+
+                </li>
+
+                <li class="nav-item">
+
+                    <a class="nav-link"
+                       href="/login">
+
+                        Login
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+<!--=========================
+      CATALOG HERO
+==========================-->
+
+<section class="catalog-hero">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <!-- Left -->
+
+            <div class="col-lg-6">
+
+                <span class="catalog-badge">
+
+                    🔥 New Collection 2026
+
+                </span>
+
+                <h1 class="catalog-title">
+
+                    Discover
+
+                    <span>Premium Products</span>
+
+                </h1>
+
+                <p class="catalog-text">
+
+                    Explore our latest collection of gaming accessories,
+                    electronics, fashion, smart gadgets and premium lifestyle
+                    products with unbeatable quality.
+
+                </p>
+
+                <div class="catalog-search">
+
+                    <input type="text"
+                           placeholder="Search products...">
+
+                    <button>
+
+                        <i class="bi bi-search"></i>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- Right -->
+
+            <div class="col-lg-6 text-center">
+
+                <img src="/images/catalog-hero.png"
+                     class="catalog-image"
+                     alt="Catalog Hero">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!--=====================================
+        CATEGORY FILTER
+======================================-->
+
+<section class="catalog-filter">
+
+    <div class="container">
+
+        <div class="filter-wrapper">
+
+            <!-- Categories -->
+
+            <div class="category-list">
+
+                <button class="category-btn active">
+
+                    All
+
+                </button>
+
+                <button class="category-btn">
+
+                    🎧 Gaming
+
+                </button>
+
+                <button class="category-btn">
+
+                    ⌚ Watches
+
+                </button>
+
+                <button class="category-btn">
+
+                    👟 Shoes
+
+                </button>
+
+                <button class="category-btn">
+
+                    🔊 Speakers
+
+                </button>
+
+                <button class="category-btn">
+
+                    🎮 Accessories
+
+                </button>
+
+            </div>
+
+            <!-- Filters -->
+
+            <div class="filter-options">
+
+                <select>
+
+                    <option>Sort By</option>
+
+                    <option>Newest</option>
+
+                    <option>Popular</option>
+
+                    <option>Best Selling</option>
+
+                </select>
+
+                <select>
+
+                    <option>Price</option>
+
+                    <option>₹500 - ₹1000</option>
+
+                    <option>₹1000 - ₹5000</option>
+
+                    <option>₹5000+</option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!--=====================================
+        FEATURED PRODUCTS
+======================================-->
+
+<section class="catalog-products">
+
+    <div class="container">
+
+        <div class="section-title text-center">
+
+            <span>OUR COLLECTION</span>
+
+            <h2>Featured Products</h2>
+
+            <p>
+                Hand-picked premium products for the best shopping experience.
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <!-- Product 1 -->
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="product-card">
+
+                    <span class="discount-badge">
+                        -20%
+                    </span>
+
+                    <button class="wishlist-btn">
+
+                        <i class="bi bi-heart"></i>
+
+                    </button>
+
+                    <img th:src="@{/images/headphone.png}"
+                         alt="Gaming headphone">
+
+                    <div class="product-info">
+
+                        <small>Gaming</small>
+
+                        <h5>RGB Gaming Headphone</h5>
+
+                        <div class="rating">
+
+                            ⭐⭐⭐⭐⭐
+
+                            <span>(248)</span>
+
+                        </div>
+
+                        <div class="price">
+
+                            <span>₹3,999</span>
+
+                            <del>₹4,999</del>
+
+                        </div>
+
+                        <button class="cart-btn">
+
+                            <i class="bi bi-cart-fill"></i>
+
+                            Add to Cart
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Product 2 -->
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="product-card">
+
+                    <span class="discount-badge">
+                        NEW
+                    </span>
+
+                    <button class="wishlist-btn">
+
+                        <i class="bi bi-heart"></i>
+
+                    </button>
+
+                    <img th:src="@{/images/watch.png}"
+                         alt="Smart Watch">
+
+                    <div class="product-info">
+
+                        <small>Smart Watch</small>
+
+                        <h5>Nova Smart Watch</h5>
+
+                        <div class="rating">
+
+                            ⭐⭐⭐⭐⭐
+
+                            <span>(180)</span>
+
+                        </div>
+
+                        <div class="price">
+
+                            <span>₹5,999</span>
+
+                            <del>₹6,999</del>
+
+                        </div>
+
+                        <button class="cart-btn">
+
+                            <i class="bi bi-cart-fill"></i>
+
+                            Add to Cart
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Product 3 -->
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="product-card">
+
+                    <button class="wishlist-btn">
+
+                        <i class="bi bi-heart"></i>
+
+                    </button>
+
+                    <img th:src="@{/images/shoes.png}"
+                         alt="Running shoes">
+
+                    <div class="product-info">
+
+                        <small>Sports</small>
+
+                        <h5>Running Shoes</h5>
+
+                        <div class="rating">
+
+                            ⭐⭐⭐⭐⭐
+
+                            <span>(321)</span>
+
+                        </div>
+
+                        <div class="price">
+
+                            <span>₹2,999</span>
+
+                            <del>₹3,499</del>
+
+                        </div>
+
+                        <button class="cart-btn">
+
+                            <i class="bi bi-cart-fill"></i>
+
+                            Add to Cart
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Product 4 -->
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="product-card">
+
+                    <span class="discount-badge">
+                        HOT
+                    </span>
+
+                    <button class="wishlist-btn">
+
+                        <i class="bi bi-heart"></i>
+
+                    </button>
+
+                    <img th:src="@{/images/speaker.png}"
+                         alt="Bluetooth speaker">
+
+                    <div class="product-info">
+
+                        <small>Audio</small>
+
+                        <h5>Bluetooth Speaker</h5>
+
+                        <div class="rating">
+
+                            ⭐⭐⭐⭐⭐
+
+                            <span>(410)</span>
+
+                        </div>
+
+                        <div class="price">
+
+                            <span>₹4,499</span>
+
+                            <del>₹5,299</del>
+
+                        </div>
+
+                        <button class="cart-btn">
+
+                            <i class="bi bi-cart-fill"></i>
+
+                            Add to Cart
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!--=====================================
+        PAGINATION
+======================================-->
+
+<section class="catalog-pagination">
+
+    <div class="container">
+
+        <div class="pagination-wrapper">
+
+            <div class="product-count">
+
+                Showing
+
+                <strong>1 - 8</strong>
+
+                of
+
+                <strong>48</strong>
+
+                Products
+
+            </div>
+
+            <nav>
+
+                <ul class="pagination">
+
+                    <li class="page-item">
+
+                        <a class="page-link" href="#">
+
+                            <i class="bi bi-chevron-left"></i>
+
+                        </a>
+
+                    </li>
+
+                    <li class="page-item active">
+
+                        <a class="page-link" href="#">
+
+                            1
+
+                        </a>
+
+                    </li>
+
+                    <li class="page-item">
+
+                        <a class="page-link" href="#">
+
+                            2
+
+                        </a>
+
+                    </li>
+
+                    <li class="page-item">
+
+                        <a class="page-link" href="#">
+
+                            3
+
+                        </a>
+
+                    </li>
+
+                    <li class="page-item">
+
+                        <a class="page-link" href="#">
+
+                            4
+
+                        </a>
+
+                    </li>
+
+                    <li class="page-item">
+
+                        <a class="page-link" href="#">
+
+                            <i class="bi bi-chevron-right"></i>
+
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </div>
+
+</section>
+<!--=====================================
+        NEWSLETTER
+======================================-->
+
+<section class="newsletter-section">
+
+    <div class="container">
+
+        <div class="newsletter-box">
+
+            <div class="row align-items-center">
+
+                <!-- Left -->
+
+                <div class="col-lg-7">
+
+                    <span class="newsletter-tag">
+
+                        🚀 EXCLUSIVE OFFERS
+
+                    </span>
+
+                    <h2>
+
+                        Stay Updated With
+
+                        <span>NovaFlow</span>
+
+                    </h2>
+
+                    <p>
+
+                        Subscribe now to receive exclusive discounts,
+                        latest arrivals, premium deals and exciting offers.
+
+                    </p>
+
+                </div>
+
+                <!-- Right -->
+
+                <div class="col-lg-5">
+
+                    <form class="newsletter-form">
+
+                        <input type="email"
+                               placeholder="Enter your email">
+
+                        <button type="submit">
+
+                            Subscribe
+
+                            <i class="bi bi-arrow-right"></i>
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!--=====================================
+            FOOTER
+======================================-->
+
+<footer class="footer-section">
+
+    <div class="container">
+
+        <div class="row">
+
+            <!-- Logo -->
+
+            <div class="col-lg-4 mb-4">
+
+                <h2 class="footer-logo">
+
+                    🚀 NovaFlow
+
+                </h2>
+
+                <p>
+
+                    NovaFlow is a premium eCommerce platform designed
+                    for modern shopping with fast delivery, secure
+                    payments and an amazing user experience.
+
+                </p>
+
+                <div class="social-icons">
+
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+
+                    <a href="#"><i class="bi bi-twitter-x"></i></a>
+
+                    <a href="#"><i class="bi bi-linkedin"></i></a>
+
+                    <a href="#"><i class="bi bi-github"></i></a>
+
+                </div>
+
+            </div>
+
+            <!-- Quick Links -->
+
+            <div class="col-lg-2 col-md-6 mb-4">
+
+                <h5>Quick Links</h5>
+
+                <ul>
+
+                    <li><a href="/">Home</a></li>
+
+                    <li><a href="/catalog">Catalog</a></li>
+
+                    <li><a href="/product">Products</a></li>
+
+                    <li><a href="/cart">Cart</a></li>
+
+                    <li><a href="/login">Login</a></li>
+
+                </ul>
+
+            </div>
+
+            <!-- Categories -->
+
+            <div class="col-lg-3 col-md-6 mb-4">
+
+                <h5>Categories</h5>
+
+                <ul>
+
+                    <li><a href="#">Gaming</a></li>
+
+                    <li><a href="#">Electronics</a></li>
+
+                    <li><a href="#">Fashion</a></li>
+
+                    <li><a href="#">Accessories</a></li>
+
+                    <li><a href="#">Smart Gadgets</a></li>
+
+                </ul>
+
+            </div>
+
+            <!-- Contact -->
+
+            <div class="col-lg-3">
+
+                <h5>Contact</h5>
+
+                <p>
+
+                    📧 support@novaflow.com
+
+                </p>
+
+                <p>
+
+                    📞 +91 98765 43210
+
+                </p>
+
+                <p>
+
+                    📍 India
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <hr>
+
+        <div class="copyright">
+
+            © 2026 NovaFlow. All Rights Reserved.
+
+        </div>
+
+    </div>
+
+</footer>
+
+<!-- Bootstrap JS -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
